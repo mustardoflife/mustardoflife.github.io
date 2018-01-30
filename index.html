@@ -93,7 +93,7 @@
       
         <p>More Info </p>
 <h4 id="文字滚动插件"><a href="#文字滚动插件" class="headerlink" title="文字滚动插件"></a>文字滚动插件</h4><h5 id="html"><a href="#html" class="headerlink" title="html"></a>html</h5><blockquote>
-<p>此方法使用flex布局  需引入flexible.js<a href="http://www.gtrsp.com:8011/js/flexible.js" target="_blank" rel="noopener">js文件地址</a>,还需引入初始化样式<a href="http://www.gtrsp.com:8011/css/init.css" target="_blank" rel="noopener">初始化css样式</a>;<br>right_pic 定义了一个图片  喇叭消息横向滚动</p>
+<p>此方法使用flex布局  需引入<a href="http://www.gtrsp.com:8011/js/flexible.js" target="_blank" rel="noopener">flexible.js</a>,还需引入<a href="http://www.gtrsp.com:8011/css/init.css" target="_blank" rel="noopener">初始化css样式</a>;<br>right_pic 定义了一个图片  喇叭消息横向滚动</p>
 </blockquote>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=<span class="string">"top_prompt"</span>&gt;</span><br><span class="line">    &lt;div class=<span class="string">"right_pic"</span>&gt;</span><br><span class="line">        &lt;img src=<span class="string">"xxx"</span> alt=<span class="string">""</span>&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;div class=<span class="string">"prompt-gun-text"</span>&gt;</span><br><span class="line">        &lt;ul class=<span class="string">"gun-text"</span>&gt;</span><br><span class="line">            &lt;li class=<span class="string">"text"</span>&gt;</span><br><span class="line">                这是第一条信息,这是第2条信息,这是第3条信息</span><br><span class="line">            &lt;/li&gt;</span><br><span class="line">            &lt;li class=<span class="string">"text"</span>&gt;这是第2条信息,这是第一条信息,这是第一条信息&lt;/li&gt;</span><br><span class="line">            &lt;li class=<span class="string">"text"</span>&gt;这是第3条信息这是第一条信息&lt;/li&gt;</span><br><span class="line">            &lt;li class=<span class="string">"text"</span>&gt;这是第4条信息这是第一条信息&lt;/li&gt;</span><br><span class="line">            &lt;li class=<span class="string">"text"</span>&gt;这是第5条信息这是第一条信息&lt;/li&gt;</span><br><span class="line">        &lt;/ul&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
 <h5 id="css"><a href="#css" class="headerlink" title="css"></a>css</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">.top_prompt &#123;</span><br><span class="line">  width: 100%;</span><br><span class="line">  height: .7rem;</span><br><span class="line">  padding: 0 .2rem;</span><br><span class="line">  background: <span class="comment">#f0f0f0;</span></span><br><span class="line">  display: -webkit-box;</span><br><span class="line">  display: -ms-flexbox;</span><br><span class="line">  display: flex;</span><br><span class="line">  line-height: .7rem;</span><br><span class="line">  -webkit-box-align: center;</span><br><span class="line">  -ms-flex-align: center;</span><br><span class="line">  align-items: center;</span><br><span class="line">  color: <span class="comment">#666;</span></span><br><span class="line">  overflow: hidden;</span><br><span class="line">  position: relative; &#125;</span><br><span class="line">  .top_prompt .right_pic &#123;</span><br><span class="line">    background: <span class="comment">#f0f0f0;</span></span><br><span class="line">    position: absolute;</span><br><span class="line">    width: 10%;</span><br><span class="line">    padding-left: .2rem;</span><br><span class="line">    top: 0;</span><br><span class="line">    left: 0;</span><br><span class="line">    z-index: 1; &#125;</span><br><span class="line">    .top_prompt .right_pic img &#123;</span><br><span class="line">      width: .55rem;</span><br><span class="line">      height: .55rem;</span><br><span class="line">      margin-right: .2rem; &#125;</span><br><span class="line">  .top_prompt .prompt-gun-text &#123;</span><br><span class="line">    height: 0.7rem;</span><br><span class="line">    overflow: hidden;</span><br><span class="line">    position: absolute;</span><br><span class="line">    left: .75rem;</span><br><span class="line">    top: 0; &#125;</span><br><span class="line">    .top_prompt .prompt-gun-text .gun-text &#123;</span><br><span class="line">      display: -webkit-box;</span><br><span class="line">      display: -ms-flexbox;</span><br><span class="line">      display: flex;</span><br><span class="line">      -ms-flex-wrap: nowrap;</span><br><span class="line">      flex-wrap: nowrap;</span><br><span class="line">      height: 100%; &#125;</span><br><span class="line">      .top_prompt .prompt-gun-text .gun-text .text &#123;</span><br><span class="line">        margin-left: .6rem;</span><br><span class="line">        word-break: keep-all;</span><br><span class="line">        white-space: nowrap; &#125;</span><br></pre></td></tr></table></figure>
@@ -102,7 +102,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mustardoflife.github.io/2018/01/30/130-1/" data-id="cjd1fvsnh000190rko0umfftb" class="article-share-link">Share</a>
+      <a data-url="http://mustardoflife.github.io/2018/01/30/130-1/" data-id="cjd1fxj9h00013wrktr23wpu9" class="article-share-link">Share</a>
       
       
     </footer>
@@ -208,7 +208,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mustardoflife.github.io/2018/01/30/130/" data-id="cjd1fvsnj000290rk2tep6ddi" class="article-share-link">Share</a>
+      <a data-url="http://mustardoflife.github.io/2018/01/30/130/" data-id="cjd1fxj9j00023wrku28o2x7u" class="article-share-link">Share</a>
       
       
     </footer>
@@ -254,7 +254,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mustardoflife.github.io/2018/01/29/129/" data-id="cjd1fvsnc000090rkjk4j4hh9" class="article-share-link">Share</a>
+      <a data-url="http://mustardoflife.github.io/2018/01/29/129/" data-id="cjd1fxj9c00003wrkn4k9k93s" class="article-share-link">Share</a>
       
       
     </footer>
@@ -322,7 +322,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mustardoflife.github.io/2018/01/12/fetchone/" data-id="cjd1fvsnl000390rknoosujx6" class="article-share-link">Share</a>
+      <a data-url="http://mustardoflife.github.io/2018/01/12/fetchone/" data-id="cjd1fxj9l00033wrkdpbg1m11" class="article-share-link">Share</a>
       
       
     </footer>
@@ -367,7 +367,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mustardoflife.github.io/2017/12/21/hello-world/" data-id="cjd1fvsnn000490rk9pbfxd1p" class="article-share-link">Share</a>
+      <a data-url="http://mustardoflife.github.io/2017/12/21/hello-world/" data-id="cjd1fxjjp00043wrkb5k5tga7" class="article-share-link">Share</a>
       
       
     </footer>
