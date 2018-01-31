@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>监听移动设备键盘时间 | mustardoflife</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="由于安卓和ipone设备不同键盘弹出的方式不同,因此需要通过判断设备,来设置对应设备软键盘弹出时,来改变对应的输入框;下面是我的解决放法,可能并不完美.请谅解  12345//设备的判断var u = navigator.userAgent;var wHeight = document.documentElement.clientHeight + 100; //浏览器高度var isAndroi">
+<meta property="og:type" content="article">
+<meta property="og:title" content="监听移动设备键盘时间">
+<meta property="og:url" content="http://mustardoflife.github.io/2018/01/31/1-31/index.html">
+<meta property="og:site_name" content="mustardoflife">
+<meta property="og:description" content="由于安卓和ipone设备不同键盘弹出的方式不同,因此需要通过判断设备,来设置对应设备软键盘弹出时,来改变对应的输入框;下面是我的解决放法,可能并不完美.请谅解  12345//设备的判断var u = navigator.userAgent;var wHeight = document.documentElement.clientHeight + 100; //浏览器高度var isAndroi">
+<meta property="og:locale" content="zh-cn">
+<meta property="og:updated_time" content="2018-01-31T05:33:52.739Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="监听移动设备键盘时间">
+<meta name="twitter:description" content="由于安卓和ipone设备不同键盘弹出的方式不同,因此需要通过判断设备,来设置对应设备软键盘弹出时,来改变对应的输入框;下面是我的解决放法,可能并不完美.请谅解  12345//设备的判断var u = navigator.userAgent;var wHeight = document.documentElement.clientHeight + 100; //浏览器高度var isAndroi">
+  
+    <link rel="alternate" href="/atom.xml" title="mustardoflife" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">mustardoflife</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">welcome to mustardoflife&#39; sky</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://mustardoflife.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-1-31" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/01/31/1-31/" class="article-date">
+  <time datetime="2018-01-31T05:22:59.000Z" itemprop="datePublished">2018-01-31</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      监听移动设备键盘时间
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>由于安卓和ipone设备不同键盘弹出的方式不同,因此需要通过判断设备,来设置对应设备软键盘弹出时,来改变对应的输入框;下面是我的解决放法,可能并不完美.请谅解</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//设备的判断</span><br><span class="line">var u = navigator.userAgent;</span><br><span class="line">var wHeight = document.documentElement.clientHeight + 100; //浏览器高度</span><br><span class="line">var isAndroid = u.indexOf(<span class="string">'Android'</span>) &gt; -1 || u.indexOf(<span class="string">'Adr'</span>) &gt; -1; //android终端</span><br><span class="line">var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>设备判断完成之后,改变对应位置样式</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">//先判断是否是ios设备</span><br><span class="line"><span class="keyword">if</span> (!isiOS) &#123;</span><br><span class="line">    //此处代表不是ios设备</span><br><span class="line">    var winHeight = $(window).height();</span><br><span class="line">    //使用计时器,每隔多久执行一次 </span><br><span class="line">    setInterval(<span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">        $(window).resize(<span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">            var thisHeight = $(this).height();</span><br><span class="line">            var height = winHeight - thisHeight;</span><br><span class="line">            <span class="keyword">if</span> (winHeight - thisHeight &gt; 50) &#123;</span><br><span class="line">                //窗口发生改变(大),故此时键盘弹出</span><br><span class="line">                //当软键盘弹出，在这里面操作</span><br><span class="line">                $(<span class="string">'body'</span>).css(<span class="string">'position'</span>, <span class="string">'static'</span>);//由于我操作的项目,是在蒙版上方设置input,蒙版弹出是需要设置body的定位方式,</span><br><span class="line">                </span><br><span class="line">                $(window).scroll();</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                //窗口发生改变(小),故此时键盘收起</span><br><span class="line">                //当软键盘收起，在此处操作</span><br><span class="line">                //页面滚动到顶部</span><br><span class="line">                $(window).scrollTop(0);</span><br><span class="line">                $(<span class="string">'body'</span>).scrollTop(0);</span><br><span class="line">                $(<span class="string">'html'</span>).scrollTop(0);</span><br><span class="line">               </span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;, 500);</span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (isiOS) &#123;</span><br><span class="line">    // 输入框获取焦点位置上移防止键盘遮挡输入框</span><br><span class="line">    var scrollh;</span><br><span class="line">    $(<span class="string">'input'</span>).focus(<span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">        $(<span class="string">'body'</span>).css(<span class="string">'position'</span>, <span class="string">'static'</span>);</span><br><span class="line">        $(<span class="string">'body'</span>).css(<span class="string">'height'</span>, wHeight + <span class="string">"px"</span>);</span><br><span class="line">        </span><br><span class="line">        scrollh = $(window).scrollTop();</span><br><span class="line">        // $(<span class="string">"body"</span>).scrollTop(100);</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    $(<span class="string">'input'</span>).blur(<span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">        $(<span class="string">'body'</span>).css(<span class="string">'height'</span>, <span class="string">"100%"</span>);</span><br><span class="line">        </span><br><span class="line">        $(<span class="string">'body'</span>).css(<span class="string">'position'</span>, <span class="string">'fixed'</span>);</span><br><span class="line">        $(<span class="string">"body"</span>).scrollTop(scrollh);</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mustardoflife.github.io/2018/01/31/1-31/" data-id="cjd2n096s0000h4rke902tn3x" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/01/31/130-1/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">喇叭消息 文字滚动</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">十二月 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/01/31/1-31/">监听移动设备键盘时间</a>
+          </li>
+        
+          <li>
+            <a href="/2018/01/31/130-1/">喇叭消息 文字滚动</a>
+          </li>
+        
+          <li>
+            <a href="/2018/01/30/130/">直达内心的生命的意义</a>
+          </li>
+        
+          <li>
+            <a href="/2018/01/29/129/">快乐在一线之间</a>
+          </li>
+        
+          <li>
+            <a href="/2018/01/12/fetchone/">似曾相识？</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 Mr zhu<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
